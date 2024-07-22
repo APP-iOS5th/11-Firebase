@@ -18,6 +18,7 @@
 		373AA87E2C4DF8F3009211FF /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA87D2C4DF8F3009211FF /* NoteViewModel.swift */; };
 		373AA8802C4DFC1D009211FF /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA87F2C4DFC1D009211FF /* FormView.swift */; };
 		373AA8832C4E0042009211FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 373AA8822C4E0042009211FF /* FirebaseAuth */; };
+		373AA8852C4E2179009211FF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8842C4E2179009211FF /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		373AA87B2C4DF8AA009211FF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		373AA87D2C4DF8F3009211FF /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		373AA87F2C4DFC1D009211FF /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		373AA8842C4E2179009211FF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				373AA8642C4DE8B2009211FF /* NoteAppApp.swift */,
 				373AA8662C4DE8B2009211FF /* ContentView.swift */,
 				373AA87F2C4DFC1D009211FF /* FormView.swift */,
+				373AA8842C4E2179009211FF /* DetailsView.swift */,
 				373AA8682C4DE8B3009211FF /* Assets.xcassets */,
 				373AA86A2C4DE8B3009211FF /* Preview Content */,
 				373AA87B2C4DF8AA009211FF /* Note.swift */,
@@ -177,6 +180,7 @@
 				373AA8802C4DFC1D009211FF /* FormView.swift in Sources */,
 				373AA8652C4DE8B2009211FF /* NoteAppApp.swift in Sources */,
 				373AA87C2C4DF8AA009211FF /* Note.swift in Sources */,
+				373AA8852C4E2179009211FF /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
