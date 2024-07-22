@@ -17,4 +17,17 @@ class NoteViewModel: ObservableObject {
         let docRef = databaseReference.addDocument(data: ["title": title])
         dump(docRef)
     }
+    
+    func fetchData() {
+        databaseReference.addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            
+            self.notes = documents.compactMap { docSnap -> Note? in
+                return try? docSnap.data(as: Note.self)
+            }
+        }
+    }
 }
