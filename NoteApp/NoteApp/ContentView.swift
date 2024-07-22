@@ -17,7 +17,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.notes, id: \.id) { note in
-                    NavigationLink(destination: DetailsView(note: note)) {
+                    NavigationLink(destination: DetailsView(note: note, viewModel: viewModel)) {
                         VStack(alignment: .leading) {
                             Text(note.title ?? "")
                                 .font(.system(size: 22, weight: .regular))
