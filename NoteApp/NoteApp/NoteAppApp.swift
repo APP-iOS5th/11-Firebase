@@ -23,7 +23,8 @@ struct NoteAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HolderView()
+                .environmentObject(AuthViewModel())
         }
     }
 }
