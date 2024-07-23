@@ -19,6 +19,8 @@
 		373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8B92C4F6C88009211FF /* PostViewModel.swift */; };
 		373AA8BC2C4F7338009211FF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BB2C4F7338009211FF /* PostView.swift */; };
 		373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BD2C4F78D8009211FF /* FeedView.swift */; };
+		373AA8C12C4F805B009211FF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8C02C4F805B009211FF /* AuthViewModel.swift */; };
+		373AA8C32C4F81B4009211FF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8C22C4F81B4009211FF /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		373AA8B92C4F6C88009211FF /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		373AA8BB2C4F7338009211FF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		373AA8BD2C4F78D8009211FF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		373AA8BF2C4F7F66009211FF /* Socially.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Socially.entitlements; sourceTree = "<group>"; };
+		373AA8C02C4F805B009211FF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		373AA8C22C4F81B4009211FF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +72,14 @@
 		373AA89D2C4F67CC009211FF /* Socially */ = {
 			isa = PBXGroup;
 			children = (
+				373AA8BF2C4F7F66009211FF /* Socially.entitlements */,
 				373AA89E2C4F67CC009211FF /* SociallyApp.swift */,
 				373AA8BB2C4F7338009211FF /* PostView.swift */,
 				373AA8BD2C4F78D8009211FF /* FeedView.swift */,
+				373AA8C22C4F81B4009211FF /* SignUpView.swift */,
 				373AA8B72C4F6AE7009211FF /* Post.swift */,
 				373AA8B92C4F6C88009211FF /* PostViewModel.swift */,
+				373AA8C02C4F805B009211FF /* AuthViewModel.swift */,
 				373AA8A22C4F67CD009211FF /* Assets.xcassets */,
 				373AA8AC2C4F68DD009211FF /* GoogleService-Info.plist */,
 				373AA8A42C4F67CD009211FF /* Preview Content */,
@@ -169,6 +177,8 @@
 			files = (
 				373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */,
 				373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */,
+				373AA8C12C4F805B009211FF /* AuthViewModel.swift in Sources */,
+				373AA8C32C4F81B4009211FF /* SignUpView.swift in Sources */,
 				373AA8B82C4F6AE7009211FF /* Post.swift in Sources */,
 				373AA8BC2C4F7338009211FF /* PostView.swift in Sources */,
 				373AA89F2C4F67CC009211FF /* SociallyApp.swift in Sources */,
@@ -302,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Socially/Socially.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Socially/Preview Content\"";
@@ -331,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Socially/Socially.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Socially/Preview Content\"";
