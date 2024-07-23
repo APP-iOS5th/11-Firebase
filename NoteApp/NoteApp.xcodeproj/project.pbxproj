@@ -19,6 +19,9 @@
 		373AA8802C4DFC1D009211FF /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA87F2C4DFC1D009211FF /* FormView.swift */; };
 		373AA8832C4E0042009211FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 373AA8822C4E0042009211FF /* FirebaseAuth */; };
 		373AA8852C4E2179009211FF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8842C4E2179009211FF /* DetailsView.swift */; };
+		373AA8872C4F2C8D009211FF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8862C4F2C8D009211FF /* AuthViewModel.swift */; };
+		373AA8892C4F2E11009211FF /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8882C4F2E11009211FF /* HolderView.swift */; };
+		373AA88B2C4F2E8F009211FF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA88A2C4F2E8F009211FF /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		373AA87D2C4DF8F3009211FF /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		373AA87F2C4DFC1D009211FF /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		373AA8842C4E2179009211FF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		373AA8862C4F2C8D009211FF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		373AA8882C4F2E11009211FF /* HolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
+		373AA88A2C4F2E8F009211FF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +77,15 @@
 			children = (
 				373AA8642C4DE8B2009211FF /* NoteAppApp.swift */,
 				373AA8662C4DE8B2009211FF /* ContentView.swift */,
+				373AA8882C4F2E11009211FF /* HolderView.swift */,
+				373AA88A2C4F2E8F009211FF /* SignUpView.swift */,
 				373AA87F2C4DFC1D009211FF /* FormView.swift */,
 				373AA8842C4E2179009211FF /* DetailsView.swift */,
 				373AA8682C4DE8B3009211FF /* Assets.xcassets */,
 				373AA86A2C4DE8B3009211FF /* Preview Content */,
 				373AA87B2C4DF8AA009211FF /* Note.swift */,
 				373AA87D2C4DF8F3009211FF /* NoteViewModel.swift */,
+				373AA8862C4F2C8D009211FF /* AuthViewModel.swift */,
 			);
 			path = NoteApp;
 			sourceTree = "<group>";
@@ -178,8 +187,11 @@
 				373AA87E2C4DF8F3009211FF /* NoteViewModel.swift in Sources */,
 				373AA8672C4DE8B2009211FF /* ContentView.swift in Sources */,
 				373AA8802C4DFC1D009211FF /* FormView.swift in Sources */,
+				373AA8872C4F2C8D009211FF /* AuthViewModel.swift in Sources */,
+				373AA8892C4F2E11009211FF /* HolderView.swift in Sources */,
 				373AA8652C4DE8B2009211FF /* NoteAppApp.swift in Sources */,
 				373AA87C2C4DF8AA009211FF /* Note.swift in Sources */,
+				373AA88B2C4F2E8F009211FF /* SignUpView.swift in Sources */,
 				373AA8852C4E2179009211FF /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
