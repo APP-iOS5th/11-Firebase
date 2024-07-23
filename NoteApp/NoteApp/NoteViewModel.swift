@@ -13,6 +13,7 @@ class NoteViewModel: ObservableObject {
     @Published var notes = [Note]()
     
     @Published var selectedNote = Note()
+    
     private lazy var databaseReference: CollectionReference? = {
         guard let userId = Auth.auth().currentUser?.uid else { return nil }
         let ref = Firestore.firestore().collection("Users").document(userId).collection("Posts")
@@ -27,7 +28,7 @@ class NoteViewModel: ObservableObject {
     func fetchData() {
         databaseReference?.addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
-                print("No documents")
+                print("No documents : \(error?.localizedDescription ?? "-")")
                 return
             }
             
