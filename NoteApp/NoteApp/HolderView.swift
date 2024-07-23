@@ -25,4 +25,5 @@ struct HolderView: View {
 
 #Preview {
     HolderView()
+        .environmentObject(AuthViewModel())
 }
