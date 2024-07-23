@@ -18,6 +18,7 @@
 		373AA8B82C4F6AE7009211FF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8B72C4F6AE7009211FF /* Post.swift */; };
 		373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8B92C4F6C88009211FF /* PostViewModel.swift */; };
 		373AA8BC2C4F7338009211FF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BB2C4F7338009211FF /* PostView.swift */; };
+		373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BD2C4F78D8009211FF /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		373AA8B72C4F6AE7009211FF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		373AA8B92C4F6C88009211FF /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		373AA8BB2C4F7338009211FF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		373AA8BD2C4F78D8009211FF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				373AA89E2C4F67CC009211FF /* SociallyApp.swift */,
 				373AA8BB2C4F7338009211FF /* PostView.swift */,
+				373AA8BD2C4F78D8009211FF /* FeedView.swift */,
 				373AA8B72C4F6AE7009211FF /* Post.swift */,
 				373AA8B92C4F6C88009211FF /* PostViewModel.swift */,
 				373AA8A22C4F67CD009211FF /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */,
 				373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */,
 				373AA8B82C4F6AE7009211FF /* Post.swift in Sources */,
 				373AA8BC2C4F7338009211FF /* PostView.swift in Sources */,
