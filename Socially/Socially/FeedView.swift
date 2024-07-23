@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseFirestoreSwift
 
 struct FeedView: View {
+    @EnvironmentObject private var authModel: AuthViewModel
     @FirestoreQuery(collectionPath: "Posts") var posts: [Post]
     
     var body: some View {
@@ -26,6 +27,16 @@ struct FeedView: View {
                 .frame(minHeight: 100, maxHeight: 350)
             }
             .navigationTitle("Feed")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        authModel.signOut()
+                    } label: {
+                        Text("Sign out")
+                    }
+                }
+            }
+
         }
         
     }
