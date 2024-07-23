@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		373AA89F2C4F67CC009211FF /* SociallyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA89E2C4F67CC009211FF /* SociallyApp.swift */; };
-		373AA8A12C4F67CC009211FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8A02C4F67CC009211FF /* ContentView.swift */; };
 		373AA8A32C4F67CD009211FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AA8A22C4F67CD009211FF /* Assets.xcassets */; };
 		373AA8A62C4F67CD009211FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AA8A52C4F67CD009211FF /* Preview Assets.xcassets */; };
 		373AA8AD2C4F68DD009211FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 373AA8AC2C4F68DD009211FF /* GoogleService-Info.plist */; };
@@ -18,17 +17,18 @@
 		373AA8B62C4F69AD009211FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 373AA8B52C4F69AD009211FF /* FirebaseStorage */; };
 		373AA8B82C4F6AE7009211FF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8B72C4F6AE7009211FF /* Post.swift */; };
 		373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8B92C4F6C88009211FF /* PostViewModel.swift */; };
+		373AA8BC2C4F7338009211FF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BB2C4F7338009211FF /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373AA89B2C4F67CC009211FF /* Socially.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socially.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373AA89E2C4F67CC009211FF /* SociallyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SociallyApp.swift; sourceTree = "<group>"; };
-		373AA8A02C4F67CC009211FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		373AA8A22C4F67CD009211FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373AA8A52C4F67CD009211FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		373AA8AC2C4F68DD009211FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		373AA8B72C4F6AE7009211FF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		373AA8B92C4F6C88009211FF /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		373AA8BB2C4F7338009211FF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				373AA89E2C4F67CC009211FF /* SociallyApp.swift */,
-				373AA8A02C4F67CC009211FF /* ContentView.swift */,
+				373AA8BB2C4F7338009211FF /* PostView.swift */,
 				373AA8B72C4F6AE7009211FF /* Post.swift */,
 				373AA8B92C4F6C88009211FF /* PostViewModel.swift */,
 				373AA8A22C4F67CD009211FF /* Assets.xcassets */,
@@ -166,7 +166,7 @@
 			files = (
 				373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */,
 				373AA8B82C4F6AE7009211FF /* Post.swift in Sources */,
-				373AA8A12C4F67CC009211FF /* ContentView.swift in Sources */,
+				373AA8BC2C4F7338009211FF /* PostView.swift in Sources */,
 				373AA89F2C4F67CC009211FF /* SociallyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
