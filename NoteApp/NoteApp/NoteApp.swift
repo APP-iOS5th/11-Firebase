@@ -17,7 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct NoteAppApp: App {
+struct NoteApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
