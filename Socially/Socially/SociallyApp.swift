@@ -25,10 +25,22 @@ struct SociallyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            FeedView()
-                .environmentObject(PostViewModel())
-//            ProfileView()
-//                .environmentObject(authModel)
+            TabView {
+                if authModel.user != nil {
+                    FeedView()
+                        .tabItem {
+                            Image(systemName: "text.bubble")
+                            Text("Feeds")
+                        }
+                }
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle")
+                        Text("Account")
+                    }
+            }
+            .environmentObject(authModel)
+            .environmentObject(PostViewModel())
         }
     }
 }
