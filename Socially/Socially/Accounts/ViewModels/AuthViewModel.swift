@@ -8,12 +8,14 @@
 import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 import AuthenticationServices
 import CryptoKit
 
 class AuthViewModel: ObservableObject {
     @Published var user: User?
     var currentNonce: String?
+    
     
     func listenToAuthState() {
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
@@ -28,7 +30,34 @@ class AuthViewModel: ObservableObject {
             print("Error signing out: %@", signOutError)
         }
     }
-
+    
+    // MARK: - Profile Image
+    func uploadProfileImage(_ imageData: Data) {
+        let storageReference = Storage.storage().reference().child("\(UUID().uuidString)")
+        
+        storageReference.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                return
+            }
+            
+            storageReference.downloadURL { url, error in
+                if let imageURL = url,
+                   let user = Auth.auth().currentUser {
+                    let changeRequest = user.createProfileChangeRequest()
+                    changeRequest.photoURL = imageURL
+                    changeRequest.commitChanges {
+                        error in
+                        if let error = error {
+                            print("\(error.localizedDescription)")
+                            return
+                        }
+                        self.user = Auth.auth().currentUser
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: - Sign in with Apple Methods
     func signInWithApple(request: ASAuthorizationAppleIDRequest) {
         let nonce = randomNonceString()
@@ -83,7 +112,7 @@ class AuthViewModel: ObservableObject {
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         let charset: [Character] =
-            Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+        Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
         var result = ""
         var remainingLength = length
         
@@ -113,7 +142,7 @@ class AuthViewModel: ObservableObject {
         
         return result
     }
-
+    
     private func sha256(_ input: String) -> String {
         let inputData = Data(input.utf8)
         let hashedData = SHA256.hash(data: inputData)
