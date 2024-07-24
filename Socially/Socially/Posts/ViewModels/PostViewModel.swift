@@ -11,16 +11,17 @@ import FirebaseStorage
 
 class PostViewModel: ObservableObject {    
     private var databaseReference = Firestore.firestore().collection("Posts")
-    let storageReference = Storage.storage().reference().child("\(UUID().uuidString)")
     
     func addData(description: String, datePublished: Date, data: Data, completion: @escaping (Error?) -> Void) {
+        let storageReference = Storage.storage().reference().child("\(UUID().uuidString)")
+
         storageReference.putData(data, metadata: nil) { metadata, error in
             if let error = error {
                 completion(error)
                 return
             }
             
-            self.storageReference.downloadURL { url, error in
+            storageReference.downloadURL { url, error in
                 if let error = error {
                     completion(error)
                     return
