@@ -21,6 +21,7 @@
 		373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8BD2C4F78D8009211FF /* FeedView.swift */; };
 		373AA8C12C4F805B009211FF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8C02C4F805B009211FF /* AuthViewModel.swift */; };
 		373AA8C32C4F81B4009211FF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8C22C4F81B4009211FF /* SignUpView.swift */; };
+		373AA8C72C50802D009211FF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AA8C62C50802D009211FF /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		373AA8BF2C4F7F66009211FF /* Socially.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Socially.entitlements; sourceTree = "<group>"; };
 		373AA8C02C4F805B009211FF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		373AA8C22C4F81B4009211FF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		373AA8C62C50802D009211FF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				373AA8BF2C4F7F66009211FF /* Socially.entitlements */,
 				373AA89E2C4F67CC009211FF /* SociallyApp.swift */,
 				373AA8BB2C4F7338009211FF /* PostView.swift */,
+				373AA8C62C50802D009211FF /* ProfileView.swift */,
 				373AA8BD2C4F78D8009211FF /* FeedView.swift */,
 				373AA8C22C4F81B4009211FF /* SignUpView.swift */,
 				373AA8B72C4F6AE7009211FF /* Post.swift */,
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373AA8C72C50802D009211FF /* ProfileView.swift in Sources */,
 				373AA8BE2C4F78D8009211FF /* FeedView.swift in Sources */,
 				373AA8BA2C4F6C88009211FF /* PostViewModel.swift in Sources */,
 				373AA8C12C4F805B009211FF /* AuthViewModel.swift in Sources */,
