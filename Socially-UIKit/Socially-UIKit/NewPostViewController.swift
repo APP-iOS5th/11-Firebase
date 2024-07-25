@@ -170,16 +170,27 @@ class NewPostViewController: UIViewController, UITextViewDelegate, PHPickerViewC
 
     // MARK: - Methods
     func addData(description: String, datePublished: Date, data: Data, completion: @escaping (Error?) -> Void) {
-        let path = "posts/\(UUID().uuidString).jpg"
+        let path = UUID().uuidString
         let fileRef = storage.child(path)
         
-        fileRef.putData(data, metadata: nil) { metadata, error in
+        // 파일 타입 및 MIME 타입 감지
+        let mimeType = detectMimeType(from: data)
+        
+        // 메타데이터 설정
+        let metadata = StorageMetadata()
+        metadata.contentType = mimeType
+
+        
+        fileRef.putData(data, metadata: metadata) { metadata, error in
             if let error = error {
                 completion(error)
                 return
             }
             
-            fileRef.downloadURL { url, error in
+            Thread.sleep(forTimeInterval: 10)
+            let thumbRef = Storage.storage().reference().child("thumbs/\(path)_320x200")
+
+            thumbRef.downloadURL { url, error in
                 if let error = error {
                     completion(error)
                     return
@@ -192,8 +203,8 @@ class NewPostViewController: UIViewController, UITextViewDelegate, PHPickerViewC
                 
                 let post = [
                     "description": description,
-                    "datePublished": Timestamp(date: datePublished),
-                    "imageUrl": url.absoluteString
+                    "datePublished": datePublished,
+                    "imageURL": url.absoluteString
                 ]
                 
                 self.db.collection("Posts").addDocument(data: post) { error in
@@ -202,5 +213,32 @@ class NewPostViewController: UIViewController, UITextViewDelegate, PHPickerViewC
             }
         }
     }
+    
+    
+    func detectMimeType(from data: Data) -> String {
+        var c: UInt8 = 0
+        data.copyBytes(to: &c, count: 1)
+        
+        switch c {
+        case 0xFF:
+            return "image/jpeg"
+        case 0x89:
+            return "image/png"
+        case 0x47:
+            return "image/gif"
+        case 0x49, 0x4D:
+            return "image/tiff"
+        case 0x25:
+            return "application/pdf"
+        case 0xD0:
+            return "application/vnd"
+        case 0x46:
+            return "text/plain"
+        default:
+            // 기본값으로 application/octet-stream 사용
+            return "application/octet-stream"
+        }
+    }
+
 
 }
