@@ -13,6 +13,7 @@
 		37E818372C51D69E007EFF62 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 37E818362C51D69E007EFF62 /* Base */; };
 		37E818392C51D6A0007EFF62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E818382C51D6A0007EFF62 /* Assets.xcassets */; };
 		37E8183C2C51D6A0007EFF62 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 37E8183B2C51D6A0007EFF62 /* Base */; };
+		37E818442C51EA47007EFF62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E818432C51EA47007EFF62 /* Post.swift */; };
 		E70E40870D069F93FAC164CC /* Pods_Socially_UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C131A0A5AE4DAFD92419B85 /* Pods_Socially_UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		37E818382C51D6A0007EFF62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37E8183B2C51D6A0007EFF62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37E8183D2C51D6A0007EFF62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E818432C51EA47007EFF62 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		566C1E13C8560F4806D3D7D5 /* Pods-Socially-UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socially-UIKit.debug.xcconfig"; path = "Target Support Files/Pods-Socially-UIKit/Pods-Socially-UIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9C131A0A5AE4DAFD92419B85 /* Pods_Socially_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socially_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66E99FA7AB6A272EABDAA21 /* Pods-Socially-UIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socially-UIKit.release.xcconfig"; path = "Target Support Files/Pods-Socially-UIKit/Pods-Socially-UIKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				37E8182F2C51D69E007EFF62 /* AppDelegate.swift */,
+				37E818432C51EA47007EFF62 /* Post.swift */,
 				37E818312C51D69E007EFF62 /* SceneDelegate.swift */,
 				37E818332C51D69E007EFF62 /* ViewController.swift */,
 				37E818352C51D69E007EFF62 /* Main.storyboard */,
@@ -80,7 +83,6 @@
 				566C1E13C8560F4806D3D7D5 /* Pods-Socially-UIKit.debug.xcconfig */,
 				F66E99FA7AB6A272EABDAA21 /* Pods-Socially-UIKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +212,7 @@
 				37E818342C51D69E007EFF62 /* ViewController.swift in Sources */,
 				37E818302C51D69E007EFF62 /* AppDelegate.swift in Sources */,
 				37E818322C51D69E007EFF62 /* SceneDelegate.swift in Sources */,
+				37E818442C51EA47007EFF62 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
