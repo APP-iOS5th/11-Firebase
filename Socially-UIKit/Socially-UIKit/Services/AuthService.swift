@@ -15,10 +15,14 @@ class AuthService {
     static let shared = AuthService()
     private init() {}
     
-    fileprivate var currentNonce: String?
+    var currentNonce: String?
     
     var currentUser: User? {
         Auth.auth().currentUser
+    }
+    
+    func listenAuthState(_ listeningBlock: @escaping (Auth, User?) -> Void) {
+        Auth.auth().addStateDidChangeListener(listeningBlock)
     }
     
     // 애플로그인
@@ -34,14 +38,14 @@ class AuthService {
         
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = viewController as? ASAuthorizationControllerDelegate
-//        authorizationController.presentationContextProvider = viewController as? ASWebAuthenticationPresentationContextProviding
+        authorizationController.presentationContextProvider = viewController as? ASAuthorizationControllerPresentationContextProviding
         authorizationController.performRequests()
     }
     
     // Firebase로 애플 인증 정보 전송
     func signInWithApple(idToken: String, rawNonce: String,
                          completion: @escaping (Result<User,Error>) -> Void) {
-        guard let nonce = currentNonce else {
+        guard let _ = currentNonce else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid state: A login callback was received, but no login request was sent."])))
             return
         }
@@ -56,7 +60,14 @@ class AuthService {
         }
     }
     
-    
+    func signOut(completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(.success(()))
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
     
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)

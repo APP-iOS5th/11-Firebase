@@ -32,7 +32,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let profileNavigationViewController = UINavigationController(rootViewController: profileViewController)
         
-        tabBarController.viewControllers = [feedNavigationController, profileNavigationViewController]
+        // 인증 상태에 따른 탭 변경
+        AuthService.shared.listenAuthState { _, user in
+            if let _ = user {
+                tabBarController.viewControllers = [feedNavigationController, profileNavigationViewController]
+            } else {
+                tabBarController.viewControllers = [profileNavigationViewController]
+            }
+        }
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
