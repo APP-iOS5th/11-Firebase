@@ -36,6 +36,14 @@ class PostDetailViewController: UIViewController {
         return label
     }()
     
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -112,7 +120,9 @@ class PostDetailViewController: UIViewController {
         
         contentView.addSubview(imageView)
         contentView.addSubview(descriptionLabel)
+        contentView.addSubview(nameLabel)
         contentView.addSubview(dateLabel)
+        
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -135,7 +145,12 @@ class PostDetailViewController: UIViewController {
             descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             
-            dateLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            nameLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+
+            dateLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
             dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             dateLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
@@ -150,6 +165,8 @@ class PostDetailViewController: UIViewController {
         }
         
         descriptionLabel.text = post.description
+        
+        nameLabel.text = post.userName
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
