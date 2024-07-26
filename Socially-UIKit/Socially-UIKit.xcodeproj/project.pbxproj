@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37DEF3A32C53239E00490904 /* PofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEF3A22C53239E00490904 /* PofileViewController.swift */; };
+		37DEF3A32C53239E00490904 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEF3A22C53239E00490904 /* ProfileViewController.swift */; };
 		37E818302C51D69E007EFF62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E8182F2C51D69E007EFF62 /* AppDelegate.swift */; };
 		37E818322C51D69E007EFF62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E818312C51D69E007EFF62 /* SceneDelegate.swift */; };
 		37E818342C51D69E007EFF62 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E818332C51D69E007EFF62 /* FeedViewController.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37DEF3A22C53239E00490904 /* PofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PofileViewController.swift; sourceTree = "<group>"; };
+		37DEF3A22C53239E00490904 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37E8182C2C51D69E007EFF62 /* Socially-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Socially-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E8182F2C51D69E007EFF62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E818312C51D69E007EFF62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				37E818472C521CBE007EFF62 /* PostTableViewCell.swift */,
 				37E818312C51D69E007EFF62 /* SceneDelegate.swift */,
 				37E818332C51D69E007EFF62 /* FeedViewController.swift */,
-				37DEF3A22C53239E00490904 /* PofileViewController.swift */,
+				37DEF3A22C53239E00490904 /* ProfileViewController.swift */,
 				37E818492C5225C3007EFF62 /* NewPostViewController.swift */,
 				37E818382C51D6A0007EFF62 /* Assets.xcassets */,
 				37E8183A2C51D6A0007EFF62 /* LaunchScreen.storyboard */,
@@ -224,7 +224,7 @@
 				37E818322C51D69E007EFF62 /* SceneDelegate.swift in Sources */,
 				37E818442C51EA47007EFF62 /* Post.swift in Sources */,
 				37E8184A2C5225C3007EFF62 /* NewPostViewController.swift in Sources */,
-				37DEF3A32C53239E00490904 /* PofileViewController.swift in Sources */,
+				37DEF3A32C53239E00490904 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

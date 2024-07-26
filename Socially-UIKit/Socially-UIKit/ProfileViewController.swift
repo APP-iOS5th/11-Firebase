@@ -7,14 +7,14 @@
 
 import UIKit
 
-class PofileViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 0)
-
+        self.view.backgroundColor = .white
+        
         // Do any additional setup after loading the view.
     }
     
