@@ -70,11 +70,11 @@ class FeedViewController: UIViewController {
             .order(by: "datePublished", descending: true)
             .addSnapshotListener {
             [weak self] querySnapshot, error in
+                print("update document!")
             guard let documents = querySnapshot?.documents else {
                 print("Error fetching documents: \(error!)")
                 return
             }
-//            dump(documents)
             let posts = documents.compactMap { Post(document: $0) }
             self?.updateDataSource(with: posts)
         }
