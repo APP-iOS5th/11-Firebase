@@ -66,9 +66,16 @@ class FeedViewController: UIViewController {
             
             cell.configureItem(with: item)
             
+            // 기존 컨트롤 UI 제거
+            cell.contentView.subviews.forEach { subview in
+                if subview is UIControl {
+                    subview.removeFromSuperview()                    
+                }
+            }
+            
             let control = UIControl()
             control.translatesAutoresizingMaskIntoConstraints = false
-            let cellAction = UIAction { [weak self] _ in                
+            let cellAction = UIAction { [weak self] _ in
                 let detailViewController = PostDetailViewController(post: item)
                 self?.navigationController?.pushViewController(detailViewController, animated: true)
             }
