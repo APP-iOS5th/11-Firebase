@@ -18,7 +18,7 @@ class FeedViewController: UIViewController {
     private var dataSource: UITableViewDiffableDataSource<Section, Post>!
     private var tableView: UITableView!
     private var listener: ListenerRegistration?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Feed"
@@ -43,10 +43,10 @@ class FeedViewController: UIViewController {
             
             self?.present(navigationController, animated: true, completion: nil)
         })
-                
+        
         navigationItem.rightBarButtonItem = barItem
     }
-
+    
     func configureTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         let refreshControl = UIRefreshControl()
@@ -63,9 +63,9 @@ class FeedViewController: UIViewController {
         dataSource = UITableViewDiffableDataSource<Section, Post>(tableView: tableView) {
             (tableView, indexPath, item) -> UITableViewCell? in
             let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-
+            
             cell.configureItem(with: item)
-        
+            
             return cell
         }
     }
@@ -79,6 +79,11 @@ class FeedViewController: UIViewController {
                     return
                 }
                 let posts = documents.compactMap { Post(document: $0) }
+                posts.forEach { post in
+                    if let path = post.path {
+                        post.checkImageURL(path)
+                    }
+                }
                 self?.updateDataSource(with: posts)
                 self?.tableView.refreshControl?.endRefreshing()
             }
@@ -89,14 +94,14 @@ class FeedViewController: UIViewController {
         listener = db.collection("Posts")
             .order(by: "datePublished", descending: true)
             .addSnapshotListener {
-            [weak self] querySnapshot, error in
-            guard let documents = querySnapshot?.documents else {
-                print("Error fetching documents: \(error!)")
-                return
+                [weak self] querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching documents: \(error!)")
+                    return
+                }
+                let posts = documents.compactMap { Post(document: $0) }
+                self?.updateDataSource(with: posts)
             }
-            let posts = documents.compactMap { Post(document: $0) }
-            self?.updateDataSource(with: posts)
-        }
     }
     
     func updateDataSource(with posts: [Post]) {
@@ -109,6 +114,6 @@ class FeedViewController: UIViewController {
     deinit {
         listener?.remove()
     }
-
+    
 }
 

@@ -26,11 +26,12 @@ struct Post: Hashable, Identifiable, Decodable {
             self.path = path
         }
     }
-    
+        
     func checkImageURL(_ path: String) {
         let thumbRef = Storage.storage().reference().child("thumbs/\(path)_320x200")
         thumbRef.downloadURL { url, error in
             if error != nil {
+                print("thumbnail error: \(error?.localizedDescription ?? "")")
                 return
             }
             
@@ -38,7 +39,10 @@ struct Post: Hashable, Identifiable, Decodable {
             let docId = self.id {
                 Firestore.firestore().collection("Posts")
                     .document(docId)
-                    .setData(["imageURL": url.absoluteString], merge: true)
+                    .setData([
+                        "path": FieldValue.delete(),
+                        "imageURL": url.absoluteString
+                             ], merge: true)
             }
         }
 
