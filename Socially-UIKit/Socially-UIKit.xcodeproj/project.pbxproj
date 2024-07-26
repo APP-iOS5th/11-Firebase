@@ -50,6 +50,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37DEF3A42C532D7100490904 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				37E818432C51EA47007EFF62 /* Post.swift */,
+				37E818472C521CBE007EFF62 /* PostTableViewCell.swift */,
+				37E818332C51D69E007EFF62 /* FeedViewController.swift */,
+				37E818492C5225C3007EFF62 /* NewPostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		37DEF3A52C532D7C00490904 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				37DEF3A22C53239E00490904 /* ProfileViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		37E818232C51D69E007EFF62 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				37E8182F2C51D69E007EFF62 /* AppDelegate.swift */,
-				37E818432C51EA47007EFF62 /* Post.swift */,
-				37E818472C521CBE007EFF62 /* PostTableViewCell.swift */,
 				37E818312C51D69E007EFF62 /* SceneDelegate.swift */,
-				37E818332C51D69E007EFF62 /* FeedViewController.swift */,
-				37DEF3A22C53239E00490904 /* ProfileViewController.swift */,
-				37E818492C5225C3007EFF62 /* NewPostViewController.swift */,
+				37DEF3A42C532D7100490904 /* Post */,
+				37DEF3A52C532D7C00490904 /* Account */,
 				37E818382C51D6A0007EFF62 /* Assets.xcassets */,
 				37E8183A2C51D6A0007EFF62 /* LaunchScreen.storyboard */,
 				37E8183D2C51D6A0007EFF62 /* Info.plist */,
